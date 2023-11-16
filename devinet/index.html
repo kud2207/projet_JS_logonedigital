@@ -11,14 +11,14 @@
 
     <br>
 
-        <table border="1">
+        <table border="0">
             <tr>
                 <th colspan="2"><center><input type="button" value="Start" id="commercer"></center></th>
             </tr>
             <tr>
-                <td ><k id="nbr_hazar_affich"></k></td>
+                <td style="width: 80px;"><k id="nbr_hazar_affich"> 0</k> essaie </td>
 
-                <td><k id="nbr_use_montrer"></td>
+                <td style="width: 80px; right: 1px;"><k id="nbr_use_montrer"></td>
             </tr>
             <tr>
                 <th colspan="2"><center><p id="note_resulta"></p></center></th>
@@ -40,22 +40,51 @@
         /*Notre fontion de l'algorithme*/
 
         function jeux(){
+
               /*variable*/
             var nbr_hazar = Math.round(Math.random()*100)
-            var nbr_saisir = prompt('entrez un nombre compris entre "0 et 100"')
+            var nbr_saisir = Number(prompt('entrez un nombre compris entre "0 et 100"' + nbr_hazar))
             var note_resulta = document.getElementById('note_resulta')
-            nbr_hazar_affich.innerHTML=nbr_hazar
+            var nbr_use_montrer = document.getElementById('nbr_use_montrer')
+            var n_compte = 1
+
+            
              
             /*condition*/
 
+ 
             if(nbr_saisir==nbr_hazar){
                 note_resulta.innerHTML='bien jour'
-                
-            }
+                nbr_use_montrer.innerHTML = nbr_saisir 
+                nbr_hazar_affich.innerHTML = n_compte              
+            } 
             else{
-                note_resulta.innerHTML='louseur'
+
+
+
+                for (let i = 1; i <= 9; i++) {
+
+                    n_compte += 1
+                    var nbr_saisir = Number(prompt(`Il vous reste ${10-i} chance`))
+
+                            if(nbr_saisir==nbr_hazar){
+                        note_resulta.innerHTML='bien jour'
+                        nbr_hazar_affich.innerHTML = n_compte
+                        nbr_use_montrer.innerHTML = nbr_saisir 
+                        break; 
+                            }      
+                            
+                            else{
+                        note_resulta.innerHTML='louseur'
+                         nbr_use_montrer.innerHTML = nbr_saisir 
+                            }
+             }
+
                 
             }
+
+
+        
         }
 
         click_commence.addEventListener('click', jeux)
