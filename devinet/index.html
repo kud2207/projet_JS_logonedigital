@@ -6,6 +6,65 @@
     <title>Devinette</title>
 </head>
 <body>
+    <h1>Jeux De Chiffres</h1>
+    <h3> BienVenue " <k id="use_nom" style="color: blueviolet; font-size: 30px;"></k> " a Devinez Le Chiffre</h3>
+
+    <br>
+
+        <table border="1">
+            <tr>
+                <th colspan="2"><center><input type="button" value="Start" id="commercer"></center></th>
+            </tr>
+            <tr>
+                <td ><k id="nbr_hazar_affich"></k></td>
+
+                <td><k id="nbr_use_montrer"></td>
+            </tr>
+            <tr>
+                <th colspan="2"><center><p id="note_resulta"></p></center></th>
+            </tr>
+        </table>
     
+    <script>
+
+        /*Declaration de varible a utiliser*/
+
+       
+        var nom_use_ecrit = prompt('entrez votre nom')
+        var nom_use_affich = document.getElementById('use_nom')
+        var nbr_hazar_affich = document.getElementById('nbr_hazar_affich')
+        var click_commence = document.getElementById('commercer')
+        
+
+
+        /*Notre fontion de l'algorithme*/
+
+        function jeux(){
+              /*variable*/
+            var nbr_hazar = Math.round(Math.random()*100)
+            var nbr_saisir = prompt('entrez un nombre compris entre "0 et 100"')
+            var note_resulta = document.getElementById('note_resulta')
+            nbr_hazar_affich.innerHTML=nbr_hazar
+             
+            /*condition*/
+
+            if(nbr_saisir==nbr_hazar){
+                note_resulta.innerHTML='bien jour'
+                
+            }
+            else{
+                note_resulta.innerHTML='louseur'
+                
+            }
+        }
+
+        click_commence.addEventListener('click', jeux)
+
+        
+
+
+        nom_use_affich.innerHTML=nom_use_ecrit 
+        
+    </script>
 </body>
 </html>
