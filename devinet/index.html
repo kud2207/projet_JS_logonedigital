@@ -16,14 +16,21 @@
                 <th colspan="2"><center><input type="button" value="Start" id="commercer"></center></th>
             </tr>
             <tr>
-                <td style="width: 80px;"><k id="nbr_hazar_affich"> 0</k> essaie </td>
+                <td style="width: 100px;"><k id="nbr_hazar_affich"> 0</k> essaie sur 10</td>
 
                 <td style="width: 80px; right: 1px;"><k id="nbr_use_montrer"></td>
             </tr>
             <tr>
                 <th colspan="2"><center><p id="note_resulta"></p></center></th>
             </tr>
+
+            <tr>
+                <th colspan="2"><center><button><a href="index.html">Reset</a></button></center></th>
+            </tr>
         </table>
+
+
+        
     
     <script>
 
@@ -58,10 +65,8 @@
                 nbr_use_montrer.innerHTML = nbr_saisir 
                 nbr_hazar_affich.innerHTML = n_compte              
             } 
+            
             else{
-
-
-
                 for (let i = 1; i <= 9; i++) {
 
                     n_compte += 1
@@ -77,21 +82,14 @@
                             else{
                         note_resulta.innerHTML='louseur'
                          nbr_use_montrer.innerHTML = nbr_saisir 
+                         nbr_hazar_affich.innerHTML = n_compte
+                         
                             }
-             }
-
-                
-            }
-
-
-        
+             }          
+            }     
         }
 
         click_commence.addEventListener('click', jeux)
-
-        
-
-
         nom_use_affich.innerHTML=nom_use_ecrit 
         
     </script>
