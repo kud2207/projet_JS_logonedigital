@@ -6,10 +6,7 @@
     <title>Generé MDP</title>
 </head>
 <body>
-    <input type="text" name="" id="aff"><button id="clickk" onclick="f()">OK</button>
-    <p id="ecrit"></p>
-    <br>
-    <br>
+
     <br>
    
     Choisir taille de votre mots de passe : <input type="number"  id="long_mdp" min="8" max="32" placeholder=" 8 à 32">
@@ -113,33 +110,5 @@
 
 
         </script>
-
-    <script>
-
-            const mot = 'azertyuiopqsdfghjklm4561233799é"(-è__çà)='
-            var aff = document.getElementById('aff')
-            var ecrit = document.getElementById('ecrit')
-
-            function ff(){
-                ecrit.innerHTML = aff.value
-            }
-
-            aff.addEventListener('keyup',ff)
-
-            function f(){
-               var tab1 = ''
-
-               for(let i =0 ; i<=10 ; i++){
-                var conts = (Math.round(Math.random()* (mot.length - 1)))
-                tab1 += mot[conts]
-
-               }
-               
-               aff.value = tab1
-                
-            }
-  
-
-    </script>
 </body>
 </html>
