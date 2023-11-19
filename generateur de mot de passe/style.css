@@ -1,0 +1,54 @@
+.styl_corps{
+    background-color: antiquewhite;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    width: 700px;
+    height: 400px;
+    top: 50px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#btn_re:hover{
+    background-color: #fb506c;
+
+  }
+
+  #butt_gen{
+    display: inline-block;
+    background-color: #161518;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 28px;
+    padding: 1px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  #butt_gen span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  #butt_gen span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  #butt_gen:hover {
+    background-color:  #7b38d8;;
+  }
+  #butt_gen:hover span {
+    padding-right: 25px;
+  }
+  #butt_gen:hover span:after {
+    opacity: 1;
+    right: 0;
+  }

@@ -3,35 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="bootstrap.css">
     <title>Devinette</title>
 </head>
 <body>
-    <h1>Jeux De Chiffres</h1>
-    <h3> BienVenue " <k id="use_nom" style="color: blueviolet; font-size: 30px;"></k> " a Devinez Le Chiffre</h3>
-
-    <br>
-
-        <table border="0">
-            <tr>
-                <th colspan="2"><center><input type="button" value="Start" id="commercer"></center></th>
-            </tr>
-            <tr>
-                <td style="width: 100px;"><k id="nbr_hazar_affich"> 0</k> essaie sur 10</td>
-
-                <td style="width: 80px; right: 1px;"><k id="nbr_use_montrer"></td>
-            </tr>
-            <tr>
-                <th colspan="2"><center><p id="note_resulta"></p></center></th>
-            </tr>
-
-            <tr>
-                <th colspan="2"><center><button><a href="index.html">Reset</a></button></center></th>
-            </tr>
-        </table>
-
-
-        
     
+        <div class="nbre_style">
+            <br><br>
+            <h1 style="font-weight: bolder;">JEUX DE CHIFFRES !!</h1>
+            <br>
+            <h3> BienVenue " <k id="use_nom" style="color: blue; font-size: 30px; font-weight:500;"></k> " a Devinez Le Chiffre</h3>
+        
+            <br><br>
+        
+             <div class="result">
+
+                     
+                <input type="button" value="Start" id="commercer"> <br><br>
+                    
+                <k id="nbr_hazar_affich"> 0</k> essaie sur 10 <br>
+                
+                <k id="nbr_use_montrer"> </k>
+            
+               <p id="note_resulta"></p>
+            
+
+             </div><br><br>
+               
+                    
+                <button id="btn_re"><a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                      </svg>
+                
+                </a></button>
+             
+                
+        </div>
+    
+  
     <script>
 
         /*Declaration de varible a utiliser*/
@@ -61,9 +73,12 @@
 
  
             if(nbr_saisir==nbr_hazar){
+                
                 note_resulta.innerHTML='bien jour'
-                nbr_use_montrer.innerHTML = nbr_saisir 
-                nbr_hazar_affich.innerHTML = n_compte              
+                note_resulta.style.color ="green"
+                note_resulta.style.fontWeight ='700'
+                nbr_use_montrer.innerHTML = 'nombre deviner est :' + nbr_saisir 
+                nbr_hazar_affich.innerHTML =  +  n_compte              
             } 
             
             else{
@@ -74,16 +89,20 @@
 
                             if(nbr_saisir==nbr_hazar){
                         note_resulta.innerHTML='bien jour'
-                        nbr_hazar_affich.innerHTML = n_compte
-                        nbr_use_montrer.innerHTML = nbr_saisir 
+                        note_resulta.style.color ="orange"
+                        note_resulta.style.fontWeight ='700'
+                        nbr_hazar_affich.innerHTML =  n_compte
+                        nbr_use_montrer.innerHTML = 'nombre deviner est :' +nbr_saisir 
                         break; 
                             }      
                             
                             else{
                         note_resulta.innerHTML='louseur'
-                         nbr_use_montrer.innerHTML = nbr_saisir 
-                         nbr_hazar_affich.innerHTML = n_compte
-                         
+                        note_resulta.style.color ="red"
+                        note_resulta.style.fontWeight ='700'
+                         nbr_use_montrer.innerHTML = 'nombre qui fallait deviner est :' + nbr_saisir 
+                         nbr_hazar_affich.innerHTML =  n_compte
+                       
                             }
              }          
             }     
