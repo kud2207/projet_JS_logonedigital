@@ -11,29 +11,33 @@
 </head>
 <body>
 
-    <!--Commencer la partie-->
-    <input type="button" value="Stard" onclick="afficheQuestion()">
+<div id="env">
+        <!--Commencer la partie-->
+        <input type="button" value="START" onclick="afficheQuestion()" id="stard_btn">
 
-    <!--Corps du gizz-->
-    <div id="corps_gizz">
-
-        <!--Afiiche la question-->
-        <div id="aff_question"></div>
-
-        <!--Choix des reponces-->
-        <div id="reponse_1"></div>
-        <div id="reponse_2"></div>
-        <div id="reponse_3"></div>
-        <div id="reponse_4"></div>
-        
-        <!--Affiche les Stat du joueur-->
-        <div id="aff_timer">
-            <div id="aff_cmpt"></div>
-            <div id="niv_up"></div>
-            <div id="niv_down"></div>
-        </div>
-    </div>
+        <!--Corps du gizz-->
+        <div id="corps_gizz">
     
+            <!--Afiiche la question-->
+            <b><div id="aff_question"></div><br></b>
+    
+            <!--Choix des reponces-->
+            <div id="reponse_1" onclick="bb()"></div>
+            <div id="reponse_2"></div>
+            <div id="reponse_3"></div>
+            <div id="reponse_4"></div>
+            
+            <!--Affiche les Stat du joueur-->
+            <div id="aff_timer">
+                <div id="aff_cmpt"></div>
+                <div id="niv_up"></div>
+                <div id="niv_down"></div>
+            </div>
+        </div>
+
+        <div id="aff_solution"></div>
+        
+</div>
 
     <script>
 /*Daclaration des variable***************************************/
@@ -47,10 +51,14 @@ const reponse_2 = document.getElementById('reponse_2')
 const reponse_3 = document.getElementById('reponse_3')
 const reponse_4 = document.getElementById('reponse_4')
 
-//Variable  des Stat du joueur
+//Variable  des Statistique du joueur
 const aff_cmpt = document.getElementById('aff_cmpt')
 const niv_up = document.getElementById('niv_up')
 const niv_down = document.getElementById('niv_down')
+
+//variable d'affiche de reponce
+
+const aff_solution = document.getElementById('aff_solution')
 
 
 
@@ -126,9 +134,20 @@ function afficheQuestion (){
     reponse_2.innerHTML = tab_question1[index_tab].choix_2
     reponse_3.innerHTML = tab_question1[index_tab].choix_3
     reponse_4.innerHTML = tab_question1[index_tab].choix_4
-    
+
+
+
+    /*trouve la vrai reponce****************************************/
+  //question 1
+    if(tab_question1[index_tab]==tab_question1[0]){
+        aff_solution.innerHTML='bb'
+    }
+    a=8
+
 } 
- 
+function bb(){
+        alert(a)
+    }
 
 
     </script>

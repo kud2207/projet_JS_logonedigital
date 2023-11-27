@@ -1,1 +1,181 @@
+/*style de conture du jeux*/
+#env{
+    text-align: center;
+    position: relative;
+    margin: auto;
+    top: 20px;
+    font-size: 25px;
+    background-color: skyblue;
+    border-radius: 10px 30px 0px 90px;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    padding: 100px;
+    width: 900px;
+    height: 600px;
+}
 
+/*style du button*/
+#stard_btn{
+    position: relative;
+    top: -50px;
+    background-color: white; 
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+}
+#stard_btn:hover {
+    background-color: #FFFF66; 
+    font-weight:700;
+    transition : 0.7s ;
+}
+
+/*style du corps de style*/
+#corps_gizz{
+    background-color: aliceblue;
+    height: 290px;
+    border-left: 5px #04AA6D solid;
+    border-right: 5px #04AA6D  solid;
+}
+
+/*style d'affiche des question*/
+#aff_question{
+background-color: orange;
+height: 45px;
+}
+
+/*style des reponces*/
+#reponse_1{
+    background-color: #FFFF66;
+    cursor: pointer;
+
+      align-items: center;
+      background: #FFFFFF;
+      border: 0 solid #E2E8F0;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      box-sizing: border-box;
+      color: #1A202C;
+      display: inline-flex;
+      font-size: 18px;
+   /*   font-family: Inter, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;*/
+      height: 30px;
+      justify-content: center;
+      line-height: 24px;
+      overflow-wrap: break-word;
+      padding: 24px;
+      text-decoration: none;
+      width: 300px;
+      border-radius: 8px;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+    #reponse_1:hover{
+        background-color: #ebe6ff;
+    }
+
+    #reponse_2{
+        background-color: #FFFF66;
+        cursor: pointer;
+    
+          align-items: center;
+          background: #FFFFFF;
+          border: 0 solid #E2E8F0;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+          box-sizing: border-box;
+          color: #1A202C;
+          display: inline-flex;
+          font-size: 18px;
+       /*   font-family: Inter, sans-serif;
+          font-size: 1rem;
+          font-weight: 700;*/
+          height: 30px;
+          justify-content: center;
+          line-height: 24px;
+          overflow-wrap: break-word;
+          padding: 24px;
+          text-decoration: none;
+          width: 300px;
+          border-radius: 8px;
+          cursor: pointer;
+          user-select: none;
+          -webkit-user-select: none;
+          touch-action: manipulation;
+        }
+        #reponse_2:hover{
+            background-color: #ebe6ff;
+        }
+
+        #reponse_3{
+            background-color: #FFFF66;
+            cursor: pointer;
+            position: relative;
+            top: 20px;
+        
+              align-items: center;
+              background: #FFFFFF;
+              border: 0 solid #E2E8F0;
+              box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+              box-sizing: border-box;
+              color: #1A202C;
+              display: inline-flex;
+              font-size: 18px;
+           /*   font-family: Inter, sans-serif;
+              font-size: 1rem;
+              font-weight: 700;*/
+              height: 30px;
+              justify-content: center;
+              line-height: 24px;
+              overflow-wrap: break-word;
+              padding: 24px;
+              text-decoration: none;
+              width: 300px;
+              border-radius: 8px;
+              cursor: pointer;
+              user-select: none;
+              -webkit-user-select: none;
+              touch-action: manipulation;
+            }
+            #reponse_3:hover{
+                background-color: #ebe6ff;
+            }
+
+            #reponse_4{
+                background-color: #FFFF66;
+                cursor: pointer;
+                position: relative;
+                top: 20px;
+            
+                  align-items: center;
+                  background: #FFFFFF;
+                  border: 0 solid #E2E8F0;
+                  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+                  box-sizing: border-box;
+                  color: #1A202C;
+                  display: inline-flex;
+                  font-size: 18px;
+               /*   font-family: Inter, sans-serif;
+                  font-size: 1rem;
+                  font-weight: 700;*/
+                  height: 30px;
+                  justify-content: center;
+                  line-height: 24px;
+                  overflow-wrap: break-word;
+                  padding: 24px;
+                  text-decoration: none;
+                  width: 300px;
+                  border-radius: 8px;
+                  cursor: pointer;
+                  user-select: none;
+                  -webkit-user-select: none;
+                  touch-action: manipulation;
+                }
+                #reponse_4:hover{
+                    background-color: #ebe6ff;
+                }
