@@ -1,0 +1,81 @@
+/*Enlentour du jeux*/
+#container{
+    text-align: center;
+    position: relative;
+    margin: auto;
+    top: 20px;
+    font-size: 25px;
+    background-color: skyblue;
+    border-radius: 10px 30px 0px 100px;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    padding: 100px;
+    width: 900px;
+    height: 600px;
+}
+
+/*Button start*/
+#start{
+    position: relative;
+    top: -50px;
+    background-color: white; 
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+#start:hover {
+    background-color: #FFFF66; 
+    font-weight:400;
+    transition : 0.7s ;
+}
+
+/*Body question reponce*/
+#quiz{
+    background-color: aliceblue;
+    height: 290px;
+    border-left: 5px #04AA6D solid;
+    border-right: 5px #04AA6D  solid;
+}
+
+/*style d'affiche des question*/
+#question{
+    background-color: orange;
+    height: 45px;
+    }
+
+    /*style des reponces*/
+.choice{
+    position: relative;
+
+    top: 40px;
+    background-color: #FFFF66;
+    cursor: pointer;
+      align-items: center;
+      background: #FFFFFF;
+      border: 0 solid #E2E8F0;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      box-sizing: border-box;
+      color: #1A202C;
+      display: inline-flex;
+      font-size: 18px;
+      height: 30px;
+      justify-content: center;
+      line-height: 24px;
+      overflow-wrap: break-word;
+      padding: 17px;
+      text-decoration: none;
+      width: 300px;
+      border-radius: 8px;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+   .choice:hover{
+        background-color: #ebe6ff;
+    }

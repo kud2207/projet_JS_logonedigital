@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <title>Quizz game</title>
+</head>
+<body>
+    <div id="container">
+        <div id="start">Start Quiz</div>
+
+        <div id="quiz">
+
+            <b><div id="question"></div></b>
+            <div id="qimg"></div>
+ 
+            <div id="choices">
+                <div id="A"  class="choice" onclick="checkAnswer('A')"></div>
+                <div id="B"class="choice" onclick="checkAnswer('B')"></div>
+                <div id="C" class="choice" onclick="checkAnswer('C')"></div>
+                <div id="D" class="choice" onclick="checkAnswer('D')"></div>
+            </div>
+
+            <div id="timer">
+                <div id="counter"></div>
+                <div id="btimeGauge"></div>
+                <div id="timeGauge"></div>
+            </div>
+
+            <div id="progress"></div>
+
+        </div>
+
+        <div id="score"></div>
+    </div>
+
+    <script src="quizz.js"></script>
+</body>
+</html>
