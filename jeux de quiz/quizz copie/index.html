@@ -10,27 +10,28 @@
 </head>
 <body>
     <div id="container">
-        <div id="start">Start Quiz</div>
+<!--Id pour lancer le jeux-->
+        <div id="start" onclick="renderQuestion()">Start Quiz</div>
 
         <div id="quiz">
-
+<!--Id pour afficher la question-->
             <b><div id="question"></div></b>
             <div id="qimg"></div>
- 
+ <!--Id des different reponce-->
             <div id="choices">
                 <div id="A"  class="choice" onclick="checkAnswer('A')"></div>
                 <div id="B"class="choice" onclick="checkAnswer('B')"></div>
                 <div id="C" class="choice" onclick="checkAnswer('C')"></div>
                 <div id="D" class="choice" onclick="checkAnswer('D')"></div>
             </div>
-
+<!--Id pour afficher le score des  reponce-->
             <div id="timer">
                 <div id="counter"></div>
                 <div id="btimeGauge"></div>
                 <div id="timeGauge"></div>
             </div>
-
-            <div id="progress"></div>
+<!--Id pour siganler la mauvaise reponce-->
+            <div id="progress">f</div>
 
         </div>
 

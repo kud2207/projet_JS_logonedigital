@@ -68,13 +68,13 @@ let questions = [
 //creation de variable de compte
 const lastQuestion = questions.length ;
 let runningQuestion = Math.floor(Math.random() * lastQuestion) ;
-let i = 0
+let i = 0 
 let score =0
 
 //Affiche de  question
 
 function renderQuestion(){
-    let q = questions[i];
+    let q = questions[runningQuestion];
 
     question.innerHTML = q.question_pose
     choiceA.innerHTML = q.choiceA
@@ -82,15 +82,16 @@ function renderQuestion(){
     choiceC.innerHTML = q.choiceC
     choiceD.innerHTML = q.choiceD
 }
-renderQuestion();
 
 
-//Solution au questions
+
+//Solution au questions funtion mere de cestcorrect et cestpascorrect
 
 function checkAnswer (answer){
-    if( answer == questions[i].reponce){
+    if( answer == questions[runningQuestion].reponce){
     score ++
     cestcorrect()
+    
 }
 else{
     cestpascorrect()
@@ -98,22 +99,22 @@ else{
 //Question suivante
 if(i < lastQuestion){
     i++;
+    runningQuestion = Math.floor(Math.random() * lastQuestion) ;
+
+   
     renderQuestion()
-
 }
 }
 
 
-
-
-//Si correct
+//Si correct Funtion enfant de ckeckannswer
 
 function cestcorrect(){
-    document.getElementById('start').style.backgroundColor='green'
+    document.getElementById('progress').style.backgroundColor='green'
 }
 //si c'est incorrect
 function cestpascorrect(){
-    document.getElementById('start').style.backgroundColor='red'
+    progress.style.backgroundColor='red'
 }
 
 
