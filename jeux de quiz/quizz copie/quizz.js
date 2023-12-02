@@ -1,14 +1,18 @@
 //Selections de nos elements
 const start = document.getElementById('start ')
 const quiz = document.getElementById('quiz ')
+
 const question = document.getElementById('question')
 const qimg = document.getElementById('qimg')
 const choiceA = document.getElementById('A')
 const choiceB = document.getElementById('B')
 const choiceC = document.getElementById('C')
 const choiceD = document.getElementById('D')
+
 const counter = document.getElementById('counter')
-const timeGauge = document.getElementById('timeGauge')
+const hautime = document.getElementById('hautime')
+
+
 const progress = document.getElementById('progress')
 const scoreDiv = document.getElementById('score')
 
@@ -69,7 +73,8 @@ let questions = [
 const lastQuestion = questions.length ;
 let runningQuestion = Math.floor(Math.random() * lastQuestion) ;
 let i = 0 
-let score =0
+let score =15
+let aff_score = 0
 
 //Affiche de  question
 
@@ -81,6 +86,9 @@ function renderQuestion(){
     choiceB.innerHTML = q.choiceB
     choiceC.innerHTML = q.choiceC
     choiceD.innerHTML = q.choiceD
+
+    scoreDiv.innerHTML= aff_score+ '/' + i
+
 }
 
 
@@ -89,23 +97,27 @@ function renderQuestion(){
 
 function checkAnswer (answer){
     if( answer == questions[runningQuestion].reponce){
-    score ++
+        hautime.style.width = score + "px"
+        score =score + 15;
+        aff_score ++
+
     cestcorrect()
+
     
 }
 else{
     cestpascorrect()
 }
 //Question suivante
-if(i < lastQuestion){
+if(i < 10){
     i++;
+    
     runningQuestion = Math.floor(Math.random() * lastQuestion) ;
 
-   
+
     renderQuestion()
 }
 }
-
 
 //Si correct Funtion enfant de ckeckannswer
 
